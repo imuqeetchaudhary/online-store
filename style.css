@@ -1,0 +1,287 @@
+body,
+h1,
+h2,
+nav,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    font-family: tahoma;
+}
+
+
+header {
+    background-color: #19224E;
+    padding: 20px 0;
+    text-align: center;
+    color: whitesmoke;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+section.banner {
+    background-color: darkgray;
+}
+
+header h1 {
+    padding: 6px 20px;
+    border: 6px solid whitesmoke;
+    border-radius: 80px;
+    display: inline-block;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    max-width: 100%;
+    margin: 100px 0 0;
+}
+
+.banner .welcome {
+    position: absolute;
+    top: 48%;
+    left: 0;
+    background-color: #19224E;
+    color: whitesmoke;
+    padding: 40px;
+}
+
+.banner .welcome h2 {
+    font-size: 25px;
+}
+
+.banner .welcome h2 span {
+    font-size: 1.2em;
+}
+
+nav {
+    background-color: darkgray;
+    position: sticky;
+    top: 101px;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline-block;
+    width: 25%;
+}
+
+nav li a {
+    color: rgb(65, 57, 57);
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+section.products h2 {
+    color: rgb(65, 57, 57);
+    text-align: center;
+    padding: 40px;
+    font-size: 2.3em;
+}
+
+section.products h3,
+p {
+    color: rgb(65, 57, 57);
+    text-align: center;
+    font-size: 1.1em;
+}
+
+section.products button {
+    font-size: 1.1em;
+    padding: 10px 25px;
+    background-color: whitesmoke;
+    color: rgb(100, 97, 97);
+    border: 3px solid darkgray;
+    border-radius: 40px;
+}
+
+section.products button:hover {
+    font-size: 1.1em;
+    padding: 10px 25px;
+    background-color: darkgray;
+    color: white;
+    border: 3px solid whitesmoke;
+    border-radius: 40px;
+}
+
+
+section.products h3:hover,
+p:hover {
+    text-decoration: underline;
+}
+
+section.products h2:hover {
+    text-decoration: underline;
+    font-size: 2.32em;
+}
+
+section.products ul {
+    white-space: nowrap;
+    text-align: center;
+}
+
+section.products li {
+    display: inline-block;
+    padding: 0 30px;
+    width: 14%;
+
+}
+
+section.products li img {
+    max-height: 200px;
+    max-width: 300px;
+}
+
+section.products li img:hover {
+    position: relative;
+    top: -3px;
+}
+
+footer {
+    background-color: #19224E;
+    padding: 1px;
+    margin: 50px 0 0;
+    max-width: 100%;
+}
+
+footer p {
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 1075px) {
+    section.products li {
+        width: 12.5%;
+    }
+
+    section.products h3,
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 1013px) {
+
+    .banner .welcome h2 {
+        font-size: 20px;
+    }
+
+    .banner .welcome h2 span {
+        font-size: 1.1em;
+    }
+
+    section.products li img {
+        max-height: 160px;
+        max-width: 150px;
+    }
+
+    section.products li {
+        text-align: center;
+    }
+
+    section.products h3,
+    p {
+        font-size: 0.8em;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    section.products ul {
+        white-space: inherit;
+    }
+
+    section.products li {
+        display: inline-block;
+        width: 30%;
+        margin: 20px 0;
+
+    }
+}
+
+
+
+@media screen and (max-width: 760px) {
+
+    .banner .welcome h2 {
+        font-size: 17px;
+    }
+
+    nav li a {
+        font-size: 1.1em;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+
+    header h1 {
+        padding: 6px 20pxpx;
+        font-size: 1.6em;
+    }
+
+    .banner .welcome {
+        position: static;
+        padding: 15px;
+        text-align: center;
+    }
+
+    section.banner {
+        background-color: #19224E;
+    }
+
+    .banner .welcome br {
+        display: none;
+    }
+
+    nav {
+        top: 93px;
+    }
+
+    nav li a {
+        font-size: 1.1em;
+    }
+
+}
+
+@media screen and (max-width: 535px) {
+
+    header h1 {
+        padding: 6px 20px;
+        font-size: 1.3em;
+    }
+
+    section.banner {
+        background-color: #19224E;
+    }
+
+    nav {
+        top: 85px;
+    }
+
+    nav li {
+        display: block;
+        text-align: left;
+        line-height: 25px;
+    }
+
+    section.products li {
+        display: inline-block;
+        width: 50%;
+        margin: 20px 0;
+    }
+
+}
