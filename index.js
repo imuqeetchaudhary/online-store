@@ -2,11 +2,11 @@ const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
-    let li = e.target.parentElement;
-    let imgSource = li.querySelector("img").src;
-    let heading = li.querySelector("h3").innerText;
-    let p = li.querySelectorAll("p");
-    let price = p[0].innerText.slice(6);
+    const li = e.target.parentElement;
+    const imgSource = li.querySelector("img").src;
+    const heading = li.querySelector("h3").innerText;
+    const p = li.querySelectorAll("p");
+    const price = p[0].innerText.slice(6);
 
     addToCart(heading, imgSource, price);
     removeItems();
@@ -48,19 +48,16 @@ function removeItems() {
   removeItemButtons.forEach((removeItemButton) => {
     removeItemButton.addEventListener("click", (e) => {
       e.target.parentElement.remove();
-      editPrices()
+      editPrices();
     });
   });
 }
 
 function editPrices() {
   const cartSection = document.querySelector("section.cart");
-
   const ul = cartSection.querySelector("ul");
-
   const lists = ul.querySelectorAll("li");
-
-  let p = cartSection.querySelector("p");
+  const p = cartSection.querySelector("p");
 
   let totalPrice = 0;
 
@@ -69,7 +66,6 @@ function editPrices() {
     const price = p.innerText.slice(8);
     totalPrice += +price;
   });
-  console.log(totalPrice);
 
   p.innerText = `Total Price = ${totalPrice}`;
 }
